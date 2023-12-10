@@ -1,0 +1,55 @@
+const handleChange=(e)=>{
+        e.preventDefault()
+        setList((olddata)=>[...olddata,data])
+        setData("")
+    }
+
+    const deletedata=(id)=>{  
+        setList((olddata)=>olddata.filter((i,index)=>id !== index))
+    }
+
+Sureshbabu Vikram15:32
+const handleChange=(e)=>{
+        e.preventDefault()
+        setList((olddata)=>[...olddata,data])
+        setData("")
+    }
+
+    const deletedata=(id)=>{  
+        setList((olddata)=>olddata.filter((i,index)=>id !== index))
+    }
+<form onSubmit={(e)=>handleChange(e)}>
+                <input type="text" value={data} onChange={(e)=>setData(e.target.value)} />
+            <button type='submit' value='Submit'>todolist</button>
+                        </form>
+
+            {list.map((item,index)=>{
+                return(
+                    <>
+                <div key={index}>{item}</div>
+                <button onClick={()=>deletedata(index)} >X</button>
+                </>
+                )
+            })}Sureshbabu Vikram15:32
+const handleChange=(e)=>{
+        e.preventDefault()
+        setList((olddata)=>[...olddata,data])
+        setData("")
+    }
+
+    const deletedata=(id)=>{  
+        setList((olddata)=>olddata.filter((i,index)=>id !== index))
+    }
+<form onSubmit={(e)=>handleChange(e)}>
+                <input type="text" value={data} onChange={(e)=>setData(e.target.value)} />
+            <button type='submit' value='Submit'>todolist</button>
+                        </form>
+
+            {list.map((item,index)=>{
+                return(
+                    <>
+                <div key={index}>{item}</div>
+                <button onClick={()=>deletedata(index)} >X</button>
+                </>
+                )
+            })}
